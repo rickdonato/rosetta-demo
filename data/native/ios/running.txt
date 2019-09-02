@@ -1,8 +1,8 @@
 Building configuration...
 
-Current configuration : 3576 bytes
+Current configuration : 3340 bytes
 !
-! Last configuration change at 17:02:38 UTC Mon Sep 2 2019 by cisco
+! Last configuration change at 10:57:22 UTC Mon Sep 2 2019
 !
 version 15.2
 service timestamps debug datetime msec
@@ -27,7 +27,6 @@ no aaa new-model
 !
 !
 !
-vtp mode transparent
 !
 !
 !
@@ -41,11 +40,6 @@ no ipv6 cef
 spanning-tree mode pvst
 spanning-tree extend system-id
 !
-vlan 100
- name VLAN100
-!
-vlan 200
- name vlan200
 !
 !
 !
@@ -71,15 +65,10 @@ interface GigabitEthernet0/1
  negotiation auto
 !
 interface GigabitEthernet0/2
- switchport trunk allowed vlan 100,200,300
- switchport trunk encapsulation dot1q
- switchport mode trunk
  media-type rj45
  negotiation auto
 !
 interface GigabitEthernet0/3
- switchport access vlan 200
- switchport mode access
  media-type rj45
  negotiation auto
 !

@@ -1,0 +1,14 @@
+interface FastEthernet1.2
+   description Description removed
+   exit
+!
+interface FastEthernet4
+   switchport trunk allowed vlan 10,20,30,40
+   exit
+!
+no vlan 20
+vlan 200
+   name dev
+   no shutdown
+   exit
+!

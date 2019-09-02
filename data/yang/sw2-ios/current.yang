@@ -1,0 +1,121 @@
+{
+    "openconfig-interfaces:interfaces": {
+        "interface": [
+            {
+                "name": "GigabitEthernet0/0",
+                "config": {
+                    "name": "GigabitEthernet0/0",
+                    "type": "iana-if-type:ethernetCsmacd",
+                    "description": "OOB management",
+                    "enabled": true
+                }
+            },
+            {
+                "name": "GigabitEthernet0/1",
+                "config": {
+                    "name": "GigabitEthernet0/1",
+                    "type": "iana-if-type:ethernetCsmacd",
+                    "enabled": true
+                }
+            },
+            {
+                "name": "GigabitEthernet0/2",
+                "config": {
+                    "name": "GigabitEthernet0/2",
+                    "type": "iana-if-type:ethernetCsmacd",
+                    "enabled": true
+                },
+                "openconfig-if-ethernet:ethernet": {
+                    "openconfig-vlan:switched-vlan": {
+                        "config": {
+                            "interface-mode": "TRUNK",
+                            "trunk-vlans": [
+                                100,
+                                200,
+                                300
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "name": "GigabitEthernet0/3",
+                "config": {
+                    "name": "GigabitEthernet0/3",
+                    "type": "iana-if-type:ethernetCsmacd",
+                    "enabled": true
+                },
+                "openconfig-if-ethernet:ethernet": {
+                    "openconfig-vlan:switched-vlan": {
+                        "config": {
+                            "interface-mode": "ACCESS",
+                            "access-vlan": 200
+                        }
+                    }
+                }
+            },
+            {
+                "name": "GigabitEthernet1/0",
+                "config": {
+                    "name": "GigabitEthernet1/0",
+                    "type": "iana-if-type:ethernetCsmacd",
+                    "enabled": true
+                }
+            },
+            {
+                "name": "GigabitEthernet1/1",
+                "config": {
+                    "name": "GigabitEthernet1/1",
+                    "type": "iana-if-type:ethernetCsmacd",
+                    "enabled": true
+                }
+            },
+            {
+                "name": "GigabitEthernet1/2",
+                "config": {
+                    "name": "GigabitEthernet1/2",
+                    "type": "iana-if-type:ethernetCsmacd",
+                    "enabled": true
+                }
+            },
+            {
+                "name": "GigabitEthernet1/3",
+                "config": {
+                    "name": "GigabitEthernet1/3",
+                    "type": "iana-if-type:ethernetCsmacd",
+                    "enabled": true
+                }
+            }
+        ]
+    },
+    "openconfig-network-instance:network-instances": {
+        "network-instance": [
+            {
+                "name": "default",
+                "config": {
+                    "name": "default"
+                },
+                "vlans": {
+                    "vlan": [
+                        {
+                            "vlan-id": 100,
+                            "config": {
+                                "vlan-id": 100,
+                                "name": "VLAN100",
+                                "status": "ACTIVE"
+                            }
+                        },
+                        {
+                            "vlan-id": 200,
+                            "config": {
+                                "vlan-id": 200,
+                                "name": "vlan200",
+                                "status": "ACTIVE"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
