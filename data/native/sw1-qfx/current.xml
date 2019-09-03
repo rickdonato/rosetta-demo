@@ -1,0 +1,20 @@
+<configuration>
+            <vlans>
+                <vlan>
+                    <name>default</name>
+                    <vlan-id>1</vlan-id>
+                </vlan>
+                <vlan>
+                    <name>prod1</name>
+                    <vlan-id>1000</vlan-id>
+                </vlan>
+                <vlan>
+                    <name>vlan100</name>
+                    <vlan-id>100</vlan-id>
+                </vlan>
+                <vlan>
+                    <name>vlan1020</name>
+                    <vlan-id>1020</vlan-id>
+                </vlan>
+            </vlans>
+    </configuration>

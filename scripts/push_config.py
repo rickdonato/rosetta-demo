@@ -1,17 +1,14 @@
-config = """<configuration>
+config = """
+<configuration>
   <vlans>
-    <vlan>
-      <vlan-id>10</vlan-id>
-      <name>prod</name>
-      <disable delete="delete"/>
-    </vlan>
     <vlan>
       <vlan-id>20</vlan-id>
       <name>dev</name>
       <disable/>
     </vlan>
   </vlans>
-</configuration>"""
+</configuration>
+"""
 
 from napalm import get_network_driver
 driver = get_network_driver('junos')
