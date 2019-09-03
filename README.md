@@ -1,3 +1,5 @@
+THIS 100% DRAFT/WIP .......
+
 ## About
 Repo containing scripts, commands, and general notes around the testing and demo`ing of NTC-Rosetta + Yangify.
 
